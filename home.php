@@ -2,14 +2,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Home Page - Money Tracker</title>
+  <title>Money Tracker</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./css/home.css">
 
 </head>
 <body>
 <div class="app">
-	<!--header-->
 	<header class="app-header">
 		<div class="app-header-logo">
 			<div class="logo">
@@ -29,7 +28,9 @@
 			<button class="user-profile">
 				<span>Farouk Zouak</span>
 				<span>
-					<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+					<a herf="profile.php">
+						<img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" />
+					</a>
 				</span>
 			</button>
 			<div class="app-header-actions-buttons">
@@ -46,21 +47,20 @@
 				<i class="ph-list"></i>
 			</button>
 		</div>
-	</header>
 
+	</header>
 	<div class="app-body">
-		<!--side bar-->
 		<div class="app-body-navigation">
 			<nav class="navigation">
 				<a href="#">
 					<i class="ph-browsers"></i>
 					<span>Dashboard</span>
 				</a>
-				<a href="Expenses.html">
+				<a href="Expenses.php">
 					<i class="ph-swap"></i>
 					<span>Transfers</span>
 				</a>
-				<a href="profile.html">
+				<a href="profile.php">
 					<i class="ph-globe"></i>
 					<span>Profile</span>
 				</a>
@@ -69,9 +69,14 @@
 					<span>Report</span>
 				</a>
 			</nav>
+			<footer class="footer">
+				<h1>Money Tracker<small>©</small></h1>
+				<div>
+					ENSIA<br />
+					All Rights Reserved 2023
+				</div>
+			</footer>
 		</div>
-		<!--category-->
-		<!--
 		<div class="app-body-main-content">
 			<section class="service-section">
 				<h2>Category</h2>
@@ -142,8 +147,6 @@
 						</button>
 					</div>
 				</div>
-		-->
-				<!--tarnsfers-->
 				<div class="transfers">
 					<div class="transfer">
 						<div class="transfer-logo">
@@ -214,7 +217,6 @@
 				</div>
 			</section>
 		</div>
-		<!-- paymenets (expenses)-->
 		<div class="app-body-sidebar">
 			<section class="payment-section">
 				<h2>New Payment</h2>
@@ -307,7 +309,7 @@
 					</button>
 					<button class="settings-button">
 						<i class="ph-gear"></i>
-						<span>ettings</span>
+						<span>More settings</span>
 					</button>
 				</div>
 			</section>

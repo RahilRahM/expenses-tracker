@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+// initializing variables
+$username = "";
+$email    = "";
+$errors = array();
+
+// connect to the database
+$db = mysqli_connect('localhost', 'username', 'password', 'database_name');
+
+// check if user is logged in
+if (!isset($_SESSION['username'])) {
+  header('location: login.php');
+}
+
+// fetch user details from database
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT username, email FROM users WHERE user_id = $user_id";
+$result = mysqli_query($db, $sql);
+$row = mysqli_fetch_assoc($result);
+$username = $row['username'];
+$email = $row['email'];
+
+// logout user
+if (isset($_GET['logout'])) {
+  session_destroy();
+  unset($_SESSION['username']);
+  header('location: login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,63 +56,19 @@
 <body>
     <div class="container">
         <div class="box">
-            <img src="" alt="">
+            <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" alt="">
             <ul>
-                <li>Username</li>
-                <li>User_ID </li>
-                <li></li>
+                <li><?php echo $username; ?></li>
+                <li><?php echo $email; ?></li>
                 <li>
-                    <i style="font-size:24px" class="fa"></i>
+                  <a href="profile.php?logout=true"><i style="font-size:24px" class="fa fa-sign-out"></i></a>
+                </li>
             </ul>
         </div>
-        <div class="About">
-
-
-            <ul>
-                <h3>More Info</h3>
-                <p></p>
-            </ul>
-            <ul>
-                <h3>Contact</h3>
-                <li>example@gmail.com</li>
-            </ul>
+        <div class="content">
+            <h1>Welcome to your profile</h1>
         </div>
     </div>
-
-     <!-- Footer -->
-     <footer>
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4">
-                <img class="logo" id="logo" src="images/logo.png" alt="Website logo">
-              </div>
-              <div class="col-md-2">
-                <h5 >Contact us</h5>
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#features">Features</a></li>
-                </ul>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                © 2023 copyright all right reserved
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </footer>
-      <!-- End Footer -->
-
 </body>
+
 </html>
