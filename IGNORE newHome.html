@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Iconbox -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Custom CSS -->
+    <style>
+    .app-body-navigation {
+        background-color: #f8f9fa;
+        height: 100vh;
+        width: 200px;
+        padding: 20px;
+    }
+    .navigation a {
+        display: block;
+        margin-bottom: 20px;
+        color: #000;
+        text-decoration: none;
+    }
+    .navigation a:hover {
+        color: #fff;
+        background-color: #007bff;
+    }
+    .navigation i {
+        margin-right: 10px;
+    }
+
+    /*side bar*/
+    .user-profile {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--c-text-tertiary);
+    transition: 0.25s ease;
+    }
+    .user-profile:hover, .user-profile:focus {
+    color: var(--c-text-primary);
+    }
+    .user-profile:hover span:last-child, .user-profile:focus span:last-child {
+    box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
+    }
+    .user-profile span:first-child {
+    display: flex;
+    font-size: 1.125rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--c-gray-600);
+    font-weight: 300;
+    }
+    .user-profile span:last-child {
+    transition: 0.25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 1.5rem;
+    flex-shrink: 0;
+    }
+
+    .icon-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid var(--c-gray-500);
+    color: var(--c-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    flex-shrink: 0;
+    }
+    .icon-button.large {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25em;
+    }
+    .icon-button i {
+    transition: 0.25s ease;
+    }
+    .icon-button:hover, .icon-button:focus {
+    background-color: var(--c-gray-600);
+    box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
+    }
+
+    </style>
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">logo</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<a class="nav-link" href="#"><span class="material-icons">
+                            home</span>
+                        </a>
+					</li>
+					<li>
+						<a class="nav-link" href="#"><span class="material-icons">
+                            settings
+                        </span></a>
+					</li>
+					<li>
+						<a class="nav-link" href="#"><span class="material-icons">
+                            notifications
+                        </span></a>
+					</li>
+					<li class="nav-item dropdown">
+                        <a
+                          class="nav-link dropdown-toggle d-flex align-items-center"
+                          href="#"
+                          id="navbarDropdownMenuLink"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                        <img
+                            src="https://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg"
+                            class="rounded-circle"
+                            height="30"
+                            alt=""
+                            loading="lazy"
+                          />
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">My profile</a></li>
+                          <li><a class="dropdown-item" href="#">Settings</a></li>
+                          <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!--side bar-->
+    <div class="app-body-navigation">
+        <nav class="navigation">
+            <a href="#">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-coins"></i>
+                <span>Expenses</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-list"></i>
+                <span>Category</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-chart-line"></i>
+                <span>Report</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-cog"></i>
+                <span>Setting</span>
+            </a>
+        </nav>
+        <div class="logout">
+            <a href="#">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+    
+    
+      <!-- Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
