@@ -71,7 +71,7 @@
 
                         <div class="d-flex justify-content-center input-group">
                         <button type="submit" name="reg_user"
-                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="home.html">Register</a></button>
+                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="profile.php">Register</a></button>
                         </div>
 
                         <p class="text-center text-muted mt-4 mb-0">Already have an account? <a href="#!"

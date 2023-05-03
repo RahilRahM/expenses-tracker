@@ -71,7 +71,7 @@
 
                         <div class="d-flex justify-content-center">
                         <button type="button"
-                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="home.html">Register</a></button>
+                            class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"><a href="home.php">Register</a></button>
                         </div>
 
                         <p class="text-center text-muted mt-4 mb-0">Already have an account? <a href="#!"

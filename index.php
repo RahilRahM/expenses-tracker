@@ -77,7 +77,7 @@
               Track your money just like you track your time,
               for us every penny counts.
             </p>
-            <a href="singup.html" class="me-3 btn">Get started</a>
+            <a href="singup.php" class="me-3 btn">Get started</a>
             <a class="btn" id="loginModalBtn" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
           </div>
         </div>
@@ -110,7 +110,7 @@
                 <label class="list-inline-item form-check-label" for="rememberMe">Remember me</label>
               </div>
               <div class="modal-footer input-group">
-                <button type="button" class="btn"  name="login_user" id="save-expense-btn" ><a href="home.html">Login</a></button>
+                <button type="button" class="btn"  name="login_user" id="save-expense-btn" ><a href="home.php">Login</a></button>
               </div>
             </form>
 
