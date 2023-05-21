@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- Bootstrap CSS -->
+     <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+     integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51"
+     crossorigin="anonymous"
+     />
+
+     <!-- style.css -->
+     <link rel="stylesheet" href="css/profile.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="https://assets.codepen.io/285131/almeria-avatar.jpeg" alt="">
+            <ul>
+                <li id="username"></li>
+                <li id="email"></li>
+                <li>
+                  <a href="profile.php?logout=true"><i style="font-size:24px" class="fa fa-sign-out"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Fetch user details from server-side API
+            $.ajax({
+                url: "api/user_details",
+                method: "GET",
+                success: function(response) {
+                    $("#username").text(response.username);
+                    $("#email").text(response.email);
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+
+            // Logout user
+            $("a[href='profile.php?logout=true']").on("click", function(e) {
+                e.preventDefault();
+                // Perform logout logic here
+                // Redirect the user to the login page
+                window.location.href = "login.php";
+            });
+        });
+    </script>
+</body>
+</html>
